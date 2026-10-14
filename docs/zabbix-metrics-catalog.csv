@@ -1,0 +1,42 @@
+metric,mapper,endpoint,client_type,failure_type,status_code,status_class,reason,mode,notes
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,timeout,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,http_non_200,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,connection,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,tls,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,parse_error,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,empty_response,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,missing_gov_user_id,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,secure,unknown,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,timeout,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,http_non_200,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,connection,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,tls,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,parse_error,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,empty_response,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,missing_gov_user_id,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,simple,unknown,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,timeout,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,http_non_200,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,connection,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,tls,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,parse_error,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,empty_response,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,missing_gov_user_id,,,,,emitted
+gsis_userid_api_failures_total,GsisUserIdProviderMapper,tax_id_converter,unknown,unknown,,,,,emitted
+gsis_userid_api_timeouts_total,GsisUserIdProviderMapper,tax_id_converter,secure,,,,,,emitted
+gsis_userid_api_timeouts_total,GsisUserIdProviderMapper,tax_id_converter,simple,,,,,,emitted
+gsis_userid_api_timeouts_total,GsisUserIdProviderMapper,tax_id_converter,unknown,,,,,,emitted
+gsis_userid_api_http_status_total,GsisUserIdProviderMapper,tax_id_converter,secure,,400-599,4xx/5xx,,,runtime observed codes
+gsis_userid_api_http_status_total,GsisUserIdProviderMapper,tax_id_converter,simple,,400-599,4xx/5xx,,,runtime observed codes
+gsis_userid_api_http_status_total,GsisUserIdProviderMapper,tax_id_converter,unknown,,400-599,4xx/5xx,,,runtime observed codes
+gsis_userid_auth_failures_total,GsisUserIdProviderMapper,,,,,,missing_converter_url,,emitted
+gsis_userid_auth_failures_total,GsisUserIdProviderMapper,,,,,,missing_taxid,,emitted
+gsis_userid_auth_failures_total,GsisUserIdProviderMapper,,,,,,external_api_no_userid,,emitted
+gsis_userid_auth_failures_total,GsisUserIdProviderMapper,,,,,,missing_user_attribute_config,,emitted
+gsis_userid_response_validation_failures_total,GsisUserIdProviderMapper,,,,,,response_not_array,,emitted
+gsis_userid_response_validation_failures_total,GsisUserIdProviderMapper,,,,,,response_empty,,emitted
+gsis_userid_response_validation_failures_total,GsisUserIdProviderMapper,,,,,,gov_user_id_missing,,emitted
+gsis_userid_http_client_mode_total,GsisUserIdProviderMapper,tax_id_converter,,,,,,cert_config_missing,simple
+gsis_userid_http_client_mode_total,GsisUserIdProviderMapper,tax_id_converter,,,,,,secure_ok,secure
+gsis_userid_http_client_mode_total,GsisUserIdProviderMapper,tax_id_converter,,,,,,secure_init_failed,simple
+gsis_metrics_counter,,,,,,,,,legacy generic counter

@@ -1,0 +1,95 @@
+# Synthetic Prometheus exposition template for GSIS UserId mapper metrics.
+# This file is intentionally pre-expanded with known label combinations.
+# Values are set to 0 as a baseline template for alert/rule authoring.
+#
+# Runtime note:
+# - In real /metrics output, Micrometer exposes only series that have been touched.
+# - gsis_userid_api_http_status_total is open-ended by status_code and is emitted only when failures with HTTP status occur.
+
+# HELP gsis_userid_api_failures_total Total external API failures for GSIS user id mapper.
+# TYPE gsis_userid_api_failures_total counter
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="timeout"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="http_non_200"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="connection"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="tls"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="parse_error"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="empty_response"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="missing_gov_user_id"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",failure_type="unknown"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="timeout"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="http_non_200"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="connection"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="tls"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="parse_error"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="empty_response"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="missing_gov_user_id"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",failure_type="unknown"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="timeout"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="http_non_200"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="connection"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="tls"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="parse_error"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="empty_response"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="missing_gov_user_id"} 0
+gsis_userid_api_failures_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",failure_type="unknown"} 0
+
+# HELP gsis_userid_api_timeouts_total Total timeout failures for external API calls.
+# TYPE gsis_userid_api_timeouts_total counter
+gsis_userid_api_timeouts_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure"} 0
+gsis_userid_api_timeouts_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple"} 0
+gsis_userid_api_timeouts_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown"} 0
+
+# HELP gsis_userid_api_http_status_total Total failed external API HTTP responses by status code.
+# TYPE gsis_userid_api_http_status_total counter
+# Open set at runtime: status_code is emitted from observed HTTP failures.
+# Common examples below (expand as needed):
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="400",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="401",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="403",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="404",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="429",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="500",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="502",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="503",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="secure",status_code="504",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="400",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="401",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="403",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="404",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="429",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="500",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="502",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="503",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="simple",status_code="504",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="400",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="401",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="403",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="404",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="429",status_class="4xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="500",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="502",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="503",status_class="5xx"} 0
+gsis_userid_api_http_status_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",client_type="unknown",status_code="504",status_class="5xx"} 0
+
+# HELP gsis_userid_auth_failures_total Total mapper-level authentication flow failures.
+# TYPE gsis_userid_auth_failures_total counter
+gsis_userid_auth_failures_total{mapper="GsisUserIdProviderMapper",reason="missing_converter_url"} 0
+gsis_userid_auth_failures_total{mapper="GsisUserIdProviderMapper",reason="missing_taxid"} 0
+gsis_userid_auth_failures_total{mapper="GsisUserIdProviderMapper",reason="external_api_no_userid"} 0
+gsis_userid_auth_failures_total{mapper="GsisUserIdProviderMapper",reason="missing_user_attribute_config"} 0
+
+# HELP gsis_userid_response_validation_failures_total Total response schema validation failures.
+# TYPE gsis_userid_response_validation_failures_total counter
+gsis_userid_response_validation_failures_total{mapper="GsisUserIdProviderMapper",reason="response_not_array"} 0
+gsis_userid_response_validation_failures_total{mapper="GsisUserIdProviderMapper",reason="response_empty"} 0
+gsis_userid_response_validation_failures_total{mapper="GsisUserIdProviderMapper",reason="gov_user_id_missing"} 0
+
+# HELP gsis_userid_http_client_mode_total Total HTTP client mode selections/fallbacks.
+# TYPE gsis_userid_http_client_mode_total counter
+gsis_userid_http_client_mode_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",mode="simple",reason="cert_config_missing"} 0
+gsis_userid_http_client_mode_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",mode="secure",reason="secure_ok"} 0
+gsis_userid_http_client_mode_total{mapper="GsisUserIdProviderMapper",endpoint="tax_id_converter",mode="simple",reason="secure_init_failed"} 0
+
+# HELP gsis_metrics_counter Generic GSIS metrics counter (legacy).
+# TYPE gsis_metrics_counter counter
+gsis_metrics_counter 0

@@ -1,0 +1,2 @@
+gr.microbase.gsis.identity.keycloak.mapper.GsisUserIdProviderMapper
+gr.microbase.gsis.identity.keycloak.mapper.GsisAuthorizationsProviderMapper
